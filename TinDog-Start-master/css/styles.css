@@ -55,13 +55,14 @@ p {
 }
 
 /* Download button */
+
 .download-button {
   margin: 5% 3% 5% 0;
 }
 
 /* Title image */
+
 .title-image {
-  /* width: 20%; */
   transform: rotate(25deg);
   position: absolute;
   right: 25%;
@@ -95,6 +96,7 @@ p {
 }
 
 /*  Testimonial Section */
+
 #testimonials {
   text-align: center;
   background-color: #ef8172;
@@ -123,6 +125,7 @@ p {
 }
 
 /* Pricing Section */
+
 #pricing {
   padding: 100px;
   text-align: center;
@@ -133,10 +136,32 @@ p {
 }
 
 /* Call to Action */
+
 #cta{
     background-color: #ff4c68;
-    padding: 100px;
+    padding: 7% 15%;
     text-align: center;
+    color: white;
+}
+
+.cta-text{
+     /* width: 55%; */
+     font-size: 3.5rem;
+     line-height: 1.5;
+     margin: 0 auto;
+}
+
+/* Footer Section */
+
+#footer{
+    background-color: fff;
+    text-align: center;
+    padding: 100px;
+    line-height: 2.5;
+}
+
+.footer-icon{
+    margin: 5px;    
 }
 
 @media (max-width: 1268px) {
