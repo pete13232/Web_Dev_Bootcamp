@@ -50,7 +50,7 @@ app.get("/", function (req, res) {
           console.log("Successfully saved default items to DB.")
         }
       })
-      res.redirect("/") // After data add redirect to skip this if block and render a item in else block
+      res.redirect("/") // After data add redirect to skip this if() block and render a item in else() block
     } else {
       res.render("list", { listTitle: "Today", newListItems: foundItems });
     }
@@ -69,6 +69,17 @@ app.post("/", function (req, res) {
   item.save();
   res.redirect("/")
 });
+
+app.post("/delete", function(req, res){
+  const checkedItemId = req.body.checkbox
+  Item.findByIdAndRemove(checkedItemId, function(err){
+    if(!err){
+      console.log("Successfully remove item")
+    }else{
+      redirect("/")
+    }
+  })
+})
 
 app.get("/work", function (req, res) {
   res.render("list", { listTitle: "Work List", newListItems: workItems });
