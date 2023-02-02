@@ -17,6 +17,7 @@ app.get("/", (req,res)=>{
 app.post("/", (req, res)=>{
     const item = req.body.newItem
     
+    console.log(req.body)
     if(req.body.list === "Work"){ // ค่ามันหลอน ๆ name เลยต้องไปใส่อยู่ตรง buttonS
         workItems.push(item)
         res.redirect("/work")
