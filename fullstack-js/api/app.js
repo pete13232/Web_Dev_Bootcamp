@@ -22,6 +22,8 @@ app.get('/attractions', function (req, res, next) {
 
 })
 
-app.listen(3333, function () {
-    console.log('CORS-enabled web server listening on port 3333')
+app.listen(3333, function (err) {
+    if (!err) {
+        console.log('CORS-enabled web server listening on port 3333')
+    } else { console.log(err) }
 })
